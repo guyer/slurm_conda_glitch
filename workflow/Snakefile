@@ -14,8 +14,5 @@ rule conda_info:
         "results/{simulation}.txt"
     conda:
         "envs/{simulation}.yaml"
-    shell:
-        """
-        conda info > {output}
-        conda list >> {output}
-        """
+    notebook:
+        "notebooks/conda_info.py.ipynb"

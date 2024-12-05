@@ -3,3 +3,5 @@ channels:
   - conda-forge
 dependencies:
   - numpy =2.1
+  - jupyter
+  - jupyterlab_code_formatter
