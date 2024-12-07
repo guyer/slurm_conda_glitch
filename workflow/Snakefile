@@ -3,16 +3,10 @@
 # https://snakemake.readthedocs.io/en/stable/snakefiles/best_practices.html,
 # in particular regarding the standardized folder structure mentioned there. 
 
+include: "rules/conda_info.smk"
+
 SIMULATIONS = ["A", "B"]
 
 rule all:
     input:
         expand("results/{simulation}.txt", simulation=SIMULATIONS)
-
-rule conda_info:
-    output:
-        "results/{simulation}.txt"
-    conda:
-        "envs/{simulation}.yaml"
-    notebook:
-        "notebooks/conda_info.py.ipynb"
