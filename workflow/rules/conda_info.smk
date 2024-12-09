@@ -1,6 +1,8 @@
 rule conda_info:
     output:
         "results/{simulation}.txt"
+    input:
+        "workflow/envs/{simulation}.yaml"
     conda:
         get_conda_environment
     notebook:
