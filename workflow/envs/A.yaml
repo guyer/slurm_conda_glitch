@@ -1,9 +1,0 @@
-name: snakemake
-channels:
-  - conda-forge
-dependencies:
-  - python==3.11
-  - jupyter
-  - jupyterlab_code_formatter
-  - pip:
-    - git+https://github.com/usnistgov/fipy.git@2c7ac21#egg=fipy

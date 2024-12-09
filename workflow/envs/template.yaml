@@ -5,5 +5,4 @@ dependencies:
   - python==3.11
   - jupyter
   - jupyterlab_code_formatter
-  - pip:
-    - git+https://github.com/usnistgov/fipy.git@66774ea82#egg=fipy
+  - ?"numpy =" + config[wildcards["simulation"]]
